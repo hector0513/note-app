@@ -1,0 +1,17 @@
+[package]
+name = "rocket"
+version = "0.1.0"
+authors = ["hector <hectorvasquez05@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+diesel = { version = "1.4.5", features = ["postgres"] }
+dotenv = "0.15.0"
+rocket = "0.4.5"
+bcrypt = "0.8.2"
+jsonwebtoken = "7.2.0"
+rocket_codegen = "0.4.5"
+rocket_contrib ={version = "0.4.5", features = ["handlebars_templates", "tera_templates"]}
+serde = { version = "1.0", features = ["derive"] }

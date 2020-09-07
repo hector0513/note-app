@@ -1,0 +1,12 @@
+{% extends "base" %}
+
+{% block content %}
+<div class="mx-4 my-6 px-3 py-6 bg-white rounded-md">
+
+    <h1 class="text-6xl"> Note App Rocket And Diesel</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <hr class="my-4 border-gray-500">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum placeat nam quis dolores nobis sequi praesentium dolorum vel. Delectus blanditiis sit ad quisquam dolor voluptates praesentium aperiam totam sed labore?</p>
+    <a href="#" class="bg-primary text-white  inline-block my-3 p-3 rounded-lg ">Portafilio</a>
+</div>
+{% endblock content %}
