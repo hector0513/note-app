@@ -9,9 +9,9 @@
     "webpack":" webpack",
     "cargo":" cargo build --release",
     "build": "npm-run-all -p webpack cargo",
-    "start": "./target/release/rocket ",
+    "quick-start": "ROCKET_PORT=$PORT; ./target/release/rocket ",
     "dev": "npm-run-all -p webpack-dev cargo-dev",
-    "build-start": "npm-run-all build start"
+    "start": "npm-run-all build quick-start"
   },
   "keywords": [],
   "author": "",
