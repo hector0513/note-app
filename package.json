@@ -9,7 +9,7 @@
     "webpack":" webpack -p",
     "build": "npm run webpack",
     "dev": "npm-run-all -p webpack-dev cargo-dev",
-    "start": ""
+    "start": "ROCKET_PORT=$PORT"
   },
   "keywords": [],
   "author": "",
