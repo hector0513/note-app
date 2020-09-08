@@ -9,6 +9,7 @@
     "webpack":" webpack -p",
     "build": "npm run webpack",
     "dev": "npm-run-all -p webpack-dev cargo-dev",
+    "start": ""
   },
   "keywords": [],
   "author": "",
