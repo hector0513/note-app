@@ -9,7 +9,6 @@
     "webpack":" webpack -p",
     "build": "npm run webpack",
     "dev": "npm-run-all -p webpack-dev cargo-dev",
-    "start": "ROCKET_PORT=$PORT; ./target/release/rocket"
   },
   "keywords": [],
   "author": "",
