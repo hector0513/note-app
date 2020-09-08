@@ -6,12 +6,10 @@
   "scripts": {
     "webpack-dev":"webpack -d -w ./src/index.css",
     "cargo-dev":" cargo run",
-    "webpack":" webpack",
-    "cargo":" cargo build --release",
-    "build": "npm-run-all -p webpack cargo",
-    "quick-start": "ROCKET_PORT=$PORT; ./target/release/rocket ",
+    "webpack":" webpack -p",
+    "build": "npm run webpack",
     "dev": "npm-run-all -p webpack-dev cargo-dev",
-    "start": "npm-run-all build quick-start"
+    "start": "ROCKET_PORT=$PORT; ./target/release/rocket"
   },
   "keywords": [],
   "author": "",

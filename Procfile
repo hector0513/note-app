@@ -1,2 +1,2 @@
-web:npm run quick-start
+web: ROCKET_PORT=$PORT; ./target/release/rocket
 release: ./target/release/diesel migration run
