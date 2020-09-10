@@ -1,0 +1,51 @@
+{% extends "base" %}
+
+{% block content %}
+<div class="bg-white max-w-sm rounded overflow-hidden shadow-lg mx-auto">
+  <div class=" py-4">
+    <h1 class="text-gray-700 text-3xl px-6">
+        New Note
+    </h1>
+ 
+    <hr class="w-full my-4 border-gray-500 px-0">
+    <form action="/note/add" method="POST" class=""> 
+        <div class="form-group px-6 py-2">
+        <input type="text" name="title" placeholder="Title" class="shadow appearance-none border border-gray-400 rounded py-2 px-3 w-full text-grey-darker">
+        </div>
+        <div class="form-group px-6 py-3">
+        <textarea name="description" placeholder="Description" class="shadow appearance-none border border-gray-400 rounded py-2 px-3 w-full text-grey-darker"></textarea>
+        </div>  
+        <div class="form-group px-6 pb-5">
+        <button type="submit" class="rounded bg-primary py-4 px-6 w-full">Submit</button>
+        </div>  
+    </form>
+  </div>
+</div>
+
+ {% if type %}
+  {%if note%}
+ 
+    {%if note.title%}
+      <script>
+       setTimeout(()=>{
+        alert("Debe llenar la descripcion")},500)
+      </script>
+
+    {% else %}
+      <script>
+        
+         setTimeout(()=>{
+        alert("Debe llenar el campo tittle")},500)
+      </script>
+    {% endif%}
+
+  {% endif%}
+{% endif %}
+{% if db %}
+   <script>
+        
+         setTimeout(()=>{
+        alert("se guardo exitosamente")},500)
+      </script>
+{% endif%}
+{% endblock content %}

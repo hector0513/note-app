@@ -14,8 +14,8 @@ pub fn index2() -> Template {
 }
 #[get("/<file..>", rank=3) ]
 pub fn files(file: PathBuf) -> Option<NamedFile> {
-    match NamedFile::open(Path::new("static/").join(file.clone())) {
+    match NamedFile::open(Path::new("static/").join(file.clone().file_name().unwrap())) {
         Ok(file)=>Some(file)
-        ,Err(_)=>NamedFile::open(Path::new("dist/").join(file)).ok()
+        ,Err(_)=>NamedFile::open(Path::new("dist/").join(file.file_name().unwrap())).ok()
     }
 }

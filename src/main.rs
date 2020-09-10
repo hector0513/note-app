@@ -4,11 +4,12 @@
 use rocket::response::NamedFile;
 
 use std::collections::HashMap;
-use rocket_contrib::templates::Template;
+use rocket_contrib::templates::{tera,Template};
 use rocket::http::{Cookie, Cookies};
 use diesel::prelude::*;
 mod routes;
 mod user;
+mod note;
 /* Our extern crates */
 #[macro_use] extern crate diesel;
 
@@ -44,5 +45,5 @@ pub fn establish_connection() -> PgConnection {
 }
 fn main() {
     rocket::ignite().attach(Template::fairing()).mount("/", routes![routes::index,routes::index2,routes::files 
-    ,user::singout,user::singout2,user::register,user::singin,user::singin2,user::login]).launch();
+    ,user::singout,user::singout2,user::register,user::singin,user::singin2,user::login,note::note_add,note::note_add_post ]).launch();
 }
